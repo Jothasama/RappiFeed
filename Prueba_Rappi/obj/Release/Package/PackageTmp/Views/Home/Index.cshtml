@@ -1,0 +1,37 @@
+﻿<div id="content_news" class="jumbotron">
+    <div class="loading" align="center">
+        <img src="@Url.Content("~/Content/Images/loading.gif")" />
+    </div>
+    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true" ng-cloak>
+        <div class="panel panel-default" ng-repeat="n in news">
+            <div class="box" role="tab" id="heading{{$index}}">
+                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse{{$index}}" aria-expanded="false" aria-controls="collapse{{$index}}" ng-click="selected(n)">
+                    <div class="col-xs-4 col-sm-3 col-md-2 col-lg-1">
+                        <span class="noti-img" ng-class-odd="'odd'" ng-class-even="'even'"></span>
+                    </div>
+                    <div class="col-xs-8 col-sm-9 col-md-10 col-lg-11">
+                        <span class="h4 noti-title" ng-bind="n.title"></span>
+                    </div>
+                </a>
+            </div>
+            <div id="collapse{{$index}}" class="panel-collapse collapse box-content" role="tabpanel" aria-labelledby="heading{{$index}}">
+                <div class="split"></div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                            <img class="img-responsive" ng-src="{{n.image}}" alt="" />
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-8 col-lg-8">
+                            <h4 ng-bind="n.title"></h4>
+                            <br />
+                            <p class="text-justify" ng-bind="n.content"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var getNewsUrl = '@Url.Action("GetNews", "Home")';
+</script>

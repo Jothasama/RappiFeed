@@ -1,0 +1,152 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    background-color: #3A4D56;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+footer {
+    text-align: center;
+    color: white;
+}
+
+/* Override the default bootstrap to apply Rappi template */
+
+.loading {
+    display: none;
+}
+
+.btn-cog {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+.navbar {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    margin-bottom: -5px;
+}
+
+.navbar-inverse {
+    background-color: #FF6654;
+    border-color: #FF6654;
+    color: white;
+}
+
+
+    .navbar-inverse .navbar-toggle {
+        display: block;
+        background-color: #FF6654;
+        border-color: #FF6654;
+        float: left;
+    }
+
+        .navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
+            background-color: #FF6654;
+            border-color: #FF6654;
+        }
+
+        .navbar-inverse .navbar-toggle .icon-bar {
+            height: 10px;
+            width: 40px;
+        }
+
+.box {
+    width: 100%;
+    min-height:70px;
+    background-color: white;
+    border-color: white;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    cursor: pointer;
+}
+
+    .box a {
+        text-decoration: none;
+    }
+
+        .box a:hover, .box a:focus {
+            text-decoration: none;
+        }
+
+.box-content {
+    margin-top: 10px;
+}
+
+.split {
+    width: 100%;
+    height: 5px;
+    background-color: #eee;
+    border-color: #eee;
+}
+
+.noti-img {
+    height: 50px;
+    width: 50px;
+    display: inline-block;
+    border-radius: 50%;
+}
+
+.noti-title {
+    top: 15px;
+    position: relative;
+}
+
+.head-title {
+    margin-top: 5px;
+}
+
+.jumbotron p {
+    font-size: 15px;
+}
+
+@media (max-width: 768px) {
+    .box {
+        height: 220px;
+    }
+
+    .noti-title {
+        top: 10px;
+    }
+
+    .head-title {
+        padding-bottom: 15px;
+    }
+
+    .jumbotron p {
+        font-size: 13px;
+    }
+}
+
+
+.even {
+    background-color: #2FC3CB;
+}
+
+.odd {
+    background-color: #C7F04B;
+}
